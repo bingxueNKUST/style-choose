@@ -1,0 +1,285 @@
+<html lang="zh-tw">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+    <script src="https://cdn.rawgit.com/jasondavies/d3-cloud/v1.2.1/build/d3.layout.cloud.js"></script>
+
+    <title>風格選擇</title>
+  </head>
+  <style>
+    .mt-10{
+      margin-top: 20px;
+    }
+
+    .mb-10{
+      margin-bottom: 20px;
+    }
+  
+    #card-a{
+      color:#000;
+      text-decoration:none;
+    }
+
+    #card-style:hover{
+      border-width:medium;
+      border-color:blue;
+      z-index:300;
+      color:#000;
+      text-decoration:none;
+    }
+
+  
+  </style>
+
+  <body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container px-5">
+        <a class="navbar-brand" href="http://127.0.0.1:8000">創作中心</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="#!"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >登入</a
+              >
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">故賞天地</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">關於我們</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">與我們聯繫</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+<!-- 複製此區塊即可-->
+       
+    <div class="container mt-10 mb-10">
+      <div class="row">
+        <div class="col-9 pre-scrollable" style="overflow-x: hidden; overflow-y:auto; height:500px; scrollbar-gutter: stable;">
+
+          <div class="row row-cols-1 row-cols-md-4 g-4 ">
+
+            <div class="col">
+              <a id="card-a"href="#">
+                <div id="card-style" class="card h-100">
+                  <img src="https://fakeimg.pl/300x200/?text=300X200&font=lobster" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Style 1</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <a id="card-a"href="#">
+                <div id="card-style" class="card h-100">
+                  <img src="https://fakeimg.pl/300x200/?text=300X200&font=lobster" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Style 2</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <a id="card-a"href="#">
+                <div id="card-style" class="card h-100">
+                  <img src="https://fakeimg.pl/300x200/?text=300X200&font=lobster" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Style 3</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <a id="card-a"href="#">
+                <div id="card-style" class="card h-100">
+                  <img src="https://fakeimg.pl/300x200/?text=300X200&font=lobster" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Style 4</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <a id="card-a"href="#">
+                <div id="card-style" class="card h-100">
+                  <img src="https://fakeimg.pl/300x200/?text=300X200&font=lobster" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Style 5</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <a id="card-a"href="#">
+                <div id="card-style" class="card h-100">
+                  <img src="https://fakeimg.pl/300x200/?text=300X200&font=lobster" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Style 6</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <a id="card-a"href="#">
+                <div id="card-style" class="card h-100">
+                  <img src="https://fakeimg.pl/300x200/?text=300X200&font=lobster" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Style 7</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+
+            <div class="col">
+              <a id="card-a"href="#">
+                <div id="card-style" class="card h-100">
+                  <img src="https://fakeimg.pl/300x200/?text=300X200&font=lobster" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Style 8</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <a id="card-a"href="#">
+                <div id="card-style" class="card h-100">
+                  <img src="https://fakeimg.pl/300x200/?text=300X200&font=lobster" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Style 9</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <a id="card-a"href="#">
+                <div id="card-style" class="card h-100">
+                  <img src="https://fakeimg.pl/300x200/?text=300X200&font=lobster" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Style 10</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <a id="card-a"href="#">
+                <div id="card-style" class="card h-100">
+                  <img src="https://fakeimg.pl/300x200/?text=300X200&font=lobster" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Style 11</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-3">
+            <div class="card">
+              <div class="card-header">
+                選擇創作風格
+              </div>
+              <div class="card-body">
+                <p class="card-text">你可以從左邊選單中，選擇接下來創作中所使用的風格，你的創作將會採取指定風格。</p>
+              </div>
+            </div>
+
+            <button  class="btn btn-outline-success mt-10" type="submit">下一步</button>
+          
+        </div>
+      </div>
+    </div>
+  
+
+<!-- 複製此區塊即可-->
+    
+
+    <!-- Footer-->
+    <footer class="py-5 bg-dark mt-10">
+      <div class="container px-4 px-lg-5">
+        <p class="m-0 text-center text-white">Copyright &copy; 創作中心 2022</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap js 全網站通用 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- 表單驗證 全網站通用 -->
+    <script>
+      (function () {
+        "use strict";
+        window.addEventListener(
+          "load",
+          function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName("needs-validation");
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(
+              forms,
+              function (form) {
+                form.addEventListener(
+                  "submit",
+                  function (event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add("was-validated");
+                  },
+                  false
+                );
+              }
+            );
+          },
+          false
+        );
+      })();
+    </script>
+  </body>
+</html>
+
+<!-- 日記 -->
+<!-- 20230120 -->
+<!-- script css 未分割 -->
